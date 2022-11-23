@@ -37,6 +37,7 @@ const prepareDOMEvents = () => {
   popupCloseBtn.addEventListener('click', closePopup)
   popupAddBtn.addEventListener('click', changeTodoText)
   todoInput.addEventListener('keyup', enterKeyCheck)
+  popupInput.addEventListener('keyup', enterKeyCheck2)
 }
 
 const addNewTask = () => {
@@ -122,7 +123,11 @@ const enterKeyCheck = e =>{
         addNewTask()
     }
 }
-
+const enterKeyCheck2 = e =>{
+    if (e.key === 'Enter'){
+        changeTodoText()
+    }
+}
 
 
 
